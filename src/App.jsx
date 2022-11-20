@@ -1,14 +1,16 @@
 import Row from './Row'
 import './App.css'
+import requests from './request'
 
 function App() {
  
   return (
-    <div>
-      <h1>hello</h1>
-      <Row title='NETFLIX ORIGINALS'/>
-      <Row title="Trending Now"/>
-    </div>
+      <>
+        <Row  title="NETFILX ORIGINALS" fetchUrl={requests.fetchNetflixOriginals}/>
+        <Row  title="Trending Now" fetchUrl={requests.fetchTrending}/>
+      </>
+      
+    
   )
 }
 
